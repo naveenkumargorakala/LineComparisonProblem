@@ -24,12 +24,15 @@ public class LineComparison
       System.out.println("length is: "+len2);
       if(len1==len2)
       {
-         System.out.println("both the lengths are equal");
+         System.out.println("both the line lengths are equal");
+      }
+      else if(len1>len2)
+      {
+         System.out.println("ab line is long");
       }
       else
       {
-         System.out.println("lengths are not equal");
+         System.out.println("cd line is long");
       }
-      
     }
 }
