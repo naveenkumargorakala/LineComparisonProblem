@@ -3,36 +3,25 @@ import java.lang.Math.*;
 public class LineComparison
 {
    public static void main(String args[])
-   {
+   {  
+      int line1,line2;
       System.out.println("Welcome to Line Comparison Computation");
-      Scanner input = new Scanner(System.in);
-      System.out.println("Enter a point");
-      int x1 = input.nextInt();
-      int y1 = input.nextInt();
-      System.out.println("Enter b point");
-      int x2 = input.nextInt();
-      int y2 = input.nextInt();
-      int len1 = (int) Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-      System.out.println("length is: "+len1);
-      System.out.println("Enter c point");
-      int x3 = input.nextInt();
-      int y3 = input.nextInt();
-      System.out.println("Enter d point");
-      int x4 = input.nextInt();
-      int y4 = input.nextInt();
-      int len2 = (int) Math.sqrt((x4-x3)*(x4-x3)+(y4-y3)*(y4-y3));
-      System.out.println("length is: "+len2);
-      if(len1==len2)
-      {
-         System.out.println("both the line lengths are equal");
-      }
-      else if(len1>len2)
-      {
-         System.out.println("ab line is long");
-      }
+      LineComparison length1 = new LineComparison();
+      LineComparison length2 = new LineComparison();
+      line1=length1.distance(7,6,14,10);
+      System.out.println("line1 is: "+line1);
+      line2=length2.distance(33,45,26,49);
+      System.out.println("line2 is: "+line2);
+      if(line1==line2)
+         System.out.println("Distances are equal");
+      else if(line1>line2)
+         System.out.println("length1 is greater ");
       else
-      {
-         System.out.println("cd line is long");
-      }
-    }
+         System.out.println("length2 is greater");
+   }
+   public int distance(int x1,int y1,int x2,int y2)
+   {  
+      int dist = (int) Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+      return dist;
+   }
 }
