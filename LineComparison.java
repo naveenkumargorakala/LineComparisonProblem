@@ -12,7 +12,24 @@ public class LineComparison
       System.out.println("Enter b point");
       int x2 = input.nextInt();
       int y2 = input.nextInt();
-      int len = (int) Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-      System.out.println("length is: "+len);
+      int len1 = (int) Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+      System.out.println("length is: "+len1);
+      System.out.println("Enter c point");
+      int x3 = input.nextInt();
+      int y3 = input.nextInt();
+      System.out.println("Enter d point");
+      int x4 = input.nextInt();
+      int y4 = input.nextInt();
+      int len2 = (int) Math.sqrt((x4-x3)*(x4-x3)+(y4-y3)*(y4-y3));
+      System.out.println("length is: "+len2);
+      if(len1==len2)
+      {
+         System.out.println("both the lengths are equal");
+      }
+      else
+      {
+         System.out.println("lengths are not equal");
+      }
+      
     }
 }
